@@ -1,0 +1,47 @@
+@import "./index.css";
+
+.orderCardWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--rose-500);
+  padding: 15px 0px;
+  gap: 10px;
+  border-bottom: 1px solid var(--rose-100);
+}
+
+.orderDetailsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.orderDetailsWrapper img {
+    width: clamp(20%, 30%, 50%);
+  border-radius: 5px;
+}
+
+.orderDetailsWrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 5px;
+}
+
+.orderDetailsWrapper > div h2 {
+  font-size: 1rem;
+}
+
+.orderDetailsWrapper > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.orderDetailsWrapper > div > div span {
+  font-weight: 600;
+  color: var(--red);
+}

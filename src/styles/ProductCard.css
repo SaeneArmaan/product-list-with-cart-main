@@ -1,0 +1,131 @@
+@import "../styles/index.css";
+
+.pro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 25px;
+  width: 100%;
+}
+
+.pro .imageWrapperPro {
+  position: relative;
+}
+
+.pro .imageWrapperPro img {
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.imageWrapperPro > div {
+  position: absolute;
+  bottom: -20px;
+  left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50%;
+  width: clamp(10%, 20%, 40%);
+  gap: 7px;
+  padding: 10px 7px;
+  border-radius: 25px;
+  border: 1px solid var(--red);
+  background-color: white;
+  font-weight: 600;
+}
+
+.pro .detailsWrapperPro {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 5px;
+}
+
+.detailsWrapperPro h2 {
+  color: var(--rose-900);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.detailsWrapperPro p {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.detailsWrapperPro p:first-child {
+  color: var(--rose-500);
+  font-weight: 400;
+}
+
+.activeCartBtn {
+  justify-content: space-between !important;
+  background-color: var(--red) !important;
+  color: white !important;
+}
+
+.activeImg {
+  border: 2px solid var(--red);
+}
+
+.activeCartBtn div {
+  display: grid;
+  place-items: center;
+  min-width: fit-content;
+  width: fit-content;
+  aspect-ratio: 1 / 1;
+  border: solid 1px white;
+  border-radius: 25px;
+}
+
+.activeCartBtn img {
+  padding: 5px;
+}
+
+.pro .imageWrapperPro .addToCartBtn > div:hover,
+.pro .imageWrapperPro .addToCartBtn[class="addToCartBtn"]:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 480px) and (max-width: 850px) {
+  .pro {
+    flex: 1 1 47%;
+  }
+
+  .pro:last-child {
+    flex: 0 0 47%;
+  }
+
+  .imageWrapperPro > div p {
+    font-size: min(.8rem, .9rem);
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1200px) {
+    .pro {
+      flex: 1 1 47%;
+    }
+  
+    .pro:last-child {
+      flex: 0 0 47%;
+    }
+  
+    .imageWrapperPro > div p {
+      font-size: .8rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .pro {
+      flex: 1 1 30%;
+    }
+  
+    .pro:last-child {
+      flex:1 1 30%;
+    }
+  
+    .imageWrapperPro > div p {
+      font-size: .8rem;
+    }
+  }
